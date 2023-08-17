@@ -5,7 +5,7 @@ const Buttons:React.FC = () => {
         numbers.push(<button value={i}>{i}</button>)
     }
     return (
-        <div>
+        <div className='numbersDiv'>
             {numbers}
         </div>
     )
