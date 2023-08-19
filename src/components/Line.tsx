@@ -1,8 +1,10 @@
 import React from "react";
 
-const Line:React.FC = () => {
+const Line:React.FC = (props) => {
     return(
-        <input type="text" placeholder="0" />
+        <div className="lineDiv">
+            <input type="text" placeholder='0' />
+        </div>
     )
 }
 

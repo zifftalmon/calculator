@@ -5,11 +5,11 @@ body {
 /* styles in App component */
 .App {
   display: block;
-  width: 50%;
+  width: 40%;
   height: 50vh;
   margin: auto auto;
   text-align: center;
-  border: 3px solid red;
+  /* border: 3px solid red; */
 }
 .buttonsDiv {
   display: grid;
@@ -18,9 +18,10 @@ body {
 }
 /* styles for number buttons */
 .numbersDiv {
+  margin: 5px;
   display: grid;
-  width: 50%;
-  grid-template-columns: repeat(auto-fill, 150px);
+  width: 60%;
+  grid-template-columns: repeat(auto-fill, 130px);
   grid-template-rows: repeat(auto-fill, 20px);
   place-content: center;
   justify-content: center;
@@ -30,4 +31,12 @@ body {
 }
 .numbersDiv button {
   width: 10em;
+}
+/* styles for actions buttons */
+
+/* styles for text line */
+.lineDiv input{
+  width: 100%;
+  height: 50px;
+  font-size: 40px;
 }
