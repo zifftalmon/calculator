@@ -1,19 +1,18 @@
 import React from 'react' 
 import Line from './Line';
 import { useState } from 'react';
+import Actions from './Actions';
 
 
-const Buttons:React.FC = () => {
-    
-const [number, setNumber]:any[] = useState([]);
-
-const getNumber = (e:any) => {
-    setNumber(e.target.value)
-}
-
+const Buttons = () => {
+    // function and state to type numbers and actions
+    const [number, setNumber]:any[] = useState([]);
+    const getNumber = (e:any) => {
+        setNumber((number: any) => [...number, e.target.value].join(''))
+    }
     return (
-        <div>
-            <Line {...number}/>
+        <>
+            <Line number={number}/>
             <div className='numbersDiv' onClick={getNumber}>
                 <button value={1} onClick={getNumber}>1</button>
                 <button value={2} onClick={getNumber}>2</button>
@@ -26,7 +25,13 @@ const getNumber = (e:any) => {
                 <button value={9} onClick={getNumber}>9</button>
                 <button value={0} onClick={getNumber}>0</button>
             </div>
-        </div>
+            <div className="actionsDiv">
+                <button value='+' onClick={getNumber}>+</button>
+                <button value='-'>-</button>
+                <button value='/'>/</button>
+                <button value='*'>*</button>
+            </div>
+        </>
     )
 }
 

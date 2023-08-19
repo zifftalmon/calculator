@@ -9,7 +9,7 @@ function App() {
       {/* <Line/> */}
       <div className='buttonsDiv'>
         <Buttons/>
-        <Actions/>
+        {/* <Actions/> */}
       </div>
     </div>
   );

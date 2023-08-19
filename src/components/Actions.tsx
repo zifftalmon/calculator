@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 
 
-const Actions:React.FC = () => {
+const Actions = () => {
     return(
         <div className="actionsDiv">
             <button value='+'>+</button>
