@@ -8,12 +8,17 @@ const Buttons = () => {
     // function and state to type numbers and actions
     const [number, setNumber]:any[] = useState([]);
     const getNumber = (e:any) => {
-        setNumber((number: any) => [...number, e.target.value].join(''))
+        setNumber((number: any[]) => [...number,e.target.value].join(''))
     }
+    const calculate = () => {
+        setNumber((eval(number)))
+    }
+    
+
     return (
         <>
             <Line number={number}/>
-            <div className='numbersDiv' onClick={getNumber}>
+            <div className='numbersDiv'>
                 <button value={1} onClick={getNumber}>1</button>
                 <button value={2} onClick={getNumber}>2</button>
                 <button value={3} onClick={getNumber}>3</button>
@@ -27,9 +32,10 @@ const Buttons = () => {
             </div>
             <div className="actionsDiv">
                 <button value='+' onClick={getNumber}>+</button>
-                <button value='-'>-</button>
-                <button value='/'>/</button>
-                <button value='*'>*</button>
+                <button value='-' onClick={getNumber}>-</button>
+                <button value='/' onClick={getNumber}>/</button>
+                <button value='*' onClick={getNumber}>*</button>
+                <button value='=' onClick={calculate}>=</button>
             </div>
         </>
     )
