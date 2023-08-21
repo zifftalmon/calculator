@@ -1,15 +1,18 @@
 import React from 'react' 
 import Line from './Line';
 import { useState } from 'react';
+import { type } from '@testing-library/user-event/dist/type';
 
 
 const Buttons = () => {
     // function and state to type numbers and actions
     const [number, setNumber]:any[] = useState([]);
-    const [count, setCount] = useState(0)
-    let sum:number = 0
+    const [count, setCount] = useState(0);
+    let sum:number = 0;
+    const numRegex = /[0-9]/;
     
     const getNumber = (e:any) => {
+        console.log(e);
         if(e.target.value !== '=') {
             setNumber((number: any[]) => [...number,e.target.value].join(''))
         }
@@ -21,15 +24,15 @@ const Buttons = () => {
             setCount(1)
         }
         if(count === 1) {
-            console.log(count);
+            console.log(sum,count);
             setNumber([])
             setCount(0)
             setNumber((number: any[]) => [...number,e.target.value].join(''))
         }
-        // if(sum > 100 || e.target.value !== Number) {
-        //     console.log(count);
-        //     setCount(0)
-        // }
+        if(sum > 10) {
+            console.log(count);
+            setCount(0)
+        }
     }
     // const calculate = (e:any) => {
     //     console.log(e);
@@ -61,8 +64,8 @@ const Buttons = () => {
                 <button value='-' onClick={getNumber}>-</button>
                 <button value='/' onClick={getNumber}>/</button>
                 <button value='*' onClick={getNumber}>*</button>
-                <button value='*' onClick={getNumber}>(</button>
-                <button value='*' onClick={getNumber}>)</button>
+                <button value='(' onClick={getNumber}>(</button>
+                <button value=')' onClick={getNumber}>)</button>
                 <button value='**' onClick={() => setNumber([number**2])}>²</button>
                 <button value='=' onClick={getNumber}>=</button>
                 <div className='clearBtn'>

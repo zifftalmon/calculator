@@ -5,11 +5,13 @@ body {
 /* styles in App component */
 .App {
   display: block;
-  width: 45%;
-  height: 55vh;
+  width: 23%;
+  height: 57vh;
   margin: auto auto;
   text-align: center;
-  border: 3px solid red;
+  border: 3px solid blue;
+  border-radius: 10px;
+  padding: 1em;
 }
 .buttonsDiv {
   display: grid;
