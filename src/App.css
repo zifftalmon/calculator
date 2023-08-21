@@ -5,38 +5,72 @@ body {
 /* styles in App component */
 .App {
   display: block;
-  width: 40%;
-  height: 50vh;
+  width: 45%;
+  height: 55vh;
   margin: auto auto;
   text-align: center;
-  /* border: 3px solid red; */
+  border: 3px solid red;
 }
 .buttonsDiv {
   display: grid;
-  grid-template-columns: repeat(auto-fit,1fr);
-  align-items: center;
+  border: 3px solid red;
+  grid-template-columns: repeat(2,180px);
+  grid-template-rows: repeat(auto-fill, 1fr);
+  align-items: baseline;
+  width: 100%;
 }
-/* styles for number buttons */
+/* styles for number & actions buttons */
 .numbersDiv {
   margin: 5px;
   display: grid;
-  width: 60%;
-  grid-template-columns: repeat(auto-fill, 130px);
-  grid-template-rows: repeat(auto-fill, 20px);
+  width: 70%;
+  grid-template-columns: repeat(auto-fill, 50px);
+  grid-template-rows: repeat(auto-fill, 30px);
   place-content: center;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 25px;
   /* border: 3px solid red; */
 }
 .numbersDiv button {
-  width: 10em;
+  width: 50px;
+  height: 30px;
+}
+.seperator {
+  display: flex;
+  flex-direction: column;
+  width: 0px;
+  height: 100%;
+  border: 3px solid red;
 }
 /* styles for actions buttons */
-
+.actionsDiv {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,50px);
+  grid-template-rows: repeat(auto-fill, 30px);
+  /* border: 3px solid red; */
+  gap: 25px;
+  margin: -25px;
+  width: 70%;
+}
+.actionsDiv button {
+  width: 50px;
+  height: 30px;
+}
 /* styles for text line */
 .lineDiv input{
-  width: 100%;
+  width: 95%;
   height: 50px;
   font-size: 40px;
+}
+/* style for clear button */
+.clearBtn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 3px solid red; */
+  width: 127px;
+}
+.clearBtn button {
+  width: 430px;
 }
