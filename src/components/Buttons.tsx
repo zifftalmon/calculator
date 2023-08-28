@@ -9,29 +9,29 @@ const Buttons = () => {
     const [number, setNumber]:any[] = useState([]);
     const [count, setCount] = useState(0);
     let sum:number = 0;
-    const numRegex = /[0-9]/;
+    const actionRegex = /[-+*/()]/;
+    const numRegex = /[0-9]/
+
+
     
     const getNumber = (e:any) => {
-        console.log(e);
         if(e.target.value !== '=') {
             setNumber((number: any[]) => [...number,e.target.value].join(''))
         }
         else {
-            console.log(count);
-            
             sum = (eval(number))
             setNumber([sum])
             setCount(1)
         }
-        if(count === 1) {
-            console.log(sum,count);
+
+        if(count === 1 && !e.target.value.match(numRegex)) {
+            setNumber([number])
+            setCount(0)
+            setNumber((number: any[]) => [...number,e.target.value].join(''))            
+        } else if (count === 1 && !e.target.value.match(actionRegex)) {
             setNumber([])
             setCount(0)
-            setNumber((number: any[]) => [...number,e.target.value].join(''))
-        }
-        if(sum > 10) {
-            console.log(count);
-            setCount(0)
+            setNumber((number: any[]) => [...number,e.target.value].join(''))            
         }
     }
     // const calculate = (e:any) => {
