@@ -86,3 +86,54 @@ padding: 0;
   width: 430px;
   /* margin-left: 5px; */
 }
+
+@media screen and (min-width: 360px) and (max-width: 389px) {
+  .App {
+    width: 80%;
+    height: 50vh;
+  }
+
+  .buttonsDiv {
+    margin: 10px 0 0 10px; 
+  }
+}
+@media screen and (min-width: 390px) and (max-width: 411px) {
+  .App {
+    height: 40vh;
+  }
+}
+
+@media screen and (min-width: 412px) and (max-width: 767) {
+  .App {
+    height: 37vh;
+  }
+
+  .buttonsDiv {
+    margin: 10px 0 0 25px; 
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 819px) {
+  .App {
+    width: 40%;
+    height: 35vh;
+  }
+  .buttonsDiv {
+    margin-left: 13px;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (min-width: 820px) and (max-width: 911px) {
+  .App {
+    width: 40%;
+    height: 30vh;
+  }
+}
+
+@media screen and (width: 912px)   {
+  .App {
+    width: 32%;
+    height: 25vh;
+  }
+}
