@@ -36,9 +36,7 @@ const Buttons = () => {
     }
     
     const updateNumber = () => {
-        setNumber([number].toString().split("").unshift());
-        console.log(number);
-        
+        setNumber([number].toString().split("").shift());        
     }
 
     return (
