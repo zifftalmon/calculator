@@ -1,7 +1,7 @@
 body {
-  margin: 0;
-  padding: 0;
-  
+background-color: #90977F;  
+margin: 0;
+padding: 0;
 }
 /* styles in App component */
 .App {
@@ -10,17 +10,19 @@ body {
   height: 57vh;
   margin: auto auto;
   text-align: center;
-  border: 3px solid blue;
+  background-color: rgb(73, 73, 123);
   border-radius: 10px;
   padding: 1em;
+  margin-top: 2em;
 }
 .buttonsDiv {
   display: grid;
-  border: 3px solid red;
+  /* border: 3px solid red; */
   grid-template-columns: repeat(2,180px);
   grid-template-rows: repeat(auto-fill, 1fr);
   align-items: baseline;
   width: 100%;
+  margin: 10px 0 0 5px;
 }
 /* styles for number & actions buttons */
 .numbersDiv {
@@ -35,16 +37,24 @@ body {
   gap: 25px;
   /* border: 3px solid red; */
 }
-.numbersDiv button {
+.numbersDiv button, .actionsDiv button {
   width: 50px;
   height: 30px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+.numbersDiv button:hover, .actionsDiv button:hover {
+  color: white;
+  background-color: rgb(126, 126, 167);
+  transition: 0.3s;
 }
 .seperator {
   display: flex;
   flex-direction: column;
   width: 0px;
   height: 100%;
-  border: 3px solid red;
+  /* border: 3px solid red; */
 }
 /* styles for actions buttons */
 .actionsDiv {
@@ -56,15 +66,13 @@ body {
   margin: -25px;
   width: 70%;
 }
-.actionsDiv button {
-  width: 50px;
-  height: 30px;
-}
 /* styles for text line */
 .lineDiv input{
   width: 95%;
   height: 50px;
   font-size: 40px;
+  border-radius: 10px;
+  border: none;
 }
 /* style for clear button */
 .clearBtn{
