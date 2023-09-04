@@ -1,7 +1,6 @@
 import React from 'react' 
 import Line from './Line';
 import { useState } from 'react';
-import { type } from '@testing-library/user-event/dist/type';
 
 
 const Buttons = () => {
@@ -35,8 +34,8 @@ const Buttons = () => {
         }
     }
     
-    const updateNumber = () => {
-        setNumber([number].toString().split("").shift());        
+    const updateNumber = () => {        
+        setNumber([number].toString().split("").slice(0,-1).join(''));
     }
 
     return (
