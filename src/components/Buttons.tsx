@@ -34,13 +34,12 @@ const Buttons = () => {
             setNumber((number: any[]) => [...number,e.target.value].join(''))            
         }
     }
-    // const calculate = (e:any) => {
-    //     console.log(e);
-    //     if(sum !== 0) {
-
-    //     }    
-    // }
     
+    const updateNumber = () => {
+        setNumber([number].toString().split("").unshift());
+        console.log(number);
+        
+    }
 
     return (
         <>
@@ -69,7 +68,8 @@ const Buttons = () => {
                 <button value='**' onClick={() => setNumber([number**2])}>²</button>
                 <button value='=' onClick={getNumber}>=</button>
                 <div className='clearBtn'>
-                    <button onClick={() => setNumber([])}>Clear</button>
+                    <button onClick={() => setNumber([])}>C</button>
+                    <button onClick={updateNumber}>⌫</button>
                 </div>
             </div>
         </div>
